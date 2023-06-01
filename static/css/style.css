@@ -1,0 +1,51 @@
+/* Custom styles for this template */
+
+body {
+  padding-top: 3.5rem;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 1rem;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.card-deck .card {
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 10rem;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1>Список курсів</h1>
+    {% if courses %}
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+        {% for course in courses %}
+          <div class="col">
+            <div class="card h-100">
+              {% if course.image %}
+                <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.name }}">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{ course.name }}</h5>
+                <p class="card-text">{{ course.description }}</p>
+                <p class="card-text"><small class="text-muted">Початок: {{ course.start_date }}</small></p>
+                <p class="card-text"><small class="text-muted">Кінець: {{ course.end_date }}</small></p>
+                {% if course.is_current %}
+                  <span class="badge bg-success">Активний</span>
+                {% else %}
+                  <span class="badge bg-secondary">Неактивний</span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Курсів не знайдено</p>
+    {% endif %}
+  </div>
+{% endblock %}
